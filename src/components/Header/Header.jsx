@@ -114,12 +114,12 @@ const Header = (props) => {
                     <nav className="menu">
                         <ul className="menu__list">
                             <li className="menu__item">
-                                <a href="/buy-crypto" className="menu__link">
+                                <a href="/nft-market" className="menu__link">
                                     Market
                                 </a>
                             </li>
                             <li className="menu__item">
-                                <a href="/market" className="menu__link">
+                                <a href="/stacking" className="menu__link">
                                     Staking
                                 </a>
                             </li>
@@ -129,7 +129,7 @@ const Header = (props) => {
                                 </a>
                             </li>
                             <li className="menu__item">
-                                <a href="/derivatives" className="menu__link">
+                                <a href="/swap-master" className="menu__link">
                                     Buy crypto
                                 </a>
                             </li>
@@ -222,7 +222,7 @@ const Header = (props) => {
                                 </a>
                             </li>
                             <li className="menu__item">
-                                <a href="/market" className="menu__link">
+                                <a href="/nft-market" className="menu__link">
                                     NFT
                                 </a>
                             </li>
@@ -232,7 +232,7 @@ const Header = (props) => {
                                 </a>
                             </li>
                             <li className="menu__item">
-                                <a href="/derivatives" className="menu__link">
+                                <a href="/stacking" className="menu__link">
                                     Staking
                                 </a>
                             </li>

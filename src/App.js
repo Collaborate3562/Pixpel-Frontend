@@ -74,7 +74,6 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/create-nft" element={<CreateNFT />} />
         <Route path="/developer" element={<Developer />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Test />} />
       </Routes>
     </div>

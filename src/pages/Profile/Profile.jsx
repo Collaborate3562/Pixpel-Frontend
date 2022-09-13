@@ -10,19 +10,21 @@ import { menuList } from "./datalist";
 
 const Profile = () => {
   const [profileButtonIndex, setProfileButtonIndex] = useState(0);
-  const [showingComponent, setShowingComponent] = useState(<ProfilePlayerStat/>);
-  let temp; 
+  const [showingComponent, setShowingComponent] = useState(
+    <ProfilePlayerStat />
+  );
+  let temp;
   const handleClick = (idx) => () => {
     setProfileButtonIndex(idx);
-    switch(idx) {
+    switch (idx) {
       case 0:
-       temp = <ProfilePlayerStat />
-       break;
+        temp = <ProfilePlayerStat />;
+        break;
       case 1:
-        temp = <ProfileSettings />
+        temp = <ProfileSettings />;
         break;
       case 3:
-        temp = <ProfileSecurity />
+        temp = <ProfileSecurity />;
         break;
       default:
         break;
@@ -33,8 +35,8 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-row px-14 w-full min-h-screen gap-8 pb-80">
-        <div className="flex flex-col w-1/5 bg-app-black rounded-xl h-80 px-4 py-4 gap-2">
+      <div className="flex md:flex-row flex-col xl:px-14 md:px-6 w-full min-h-screen gap-8 pb-80">
+        <div className="flex flex-col md:w-1/5 w-full bg-app-black rounded-xl h-max px-4 py-8 gap-2 xl:text-base">
           {menuList.map((menu, idx) => {
             return (
               <ProfileButton
@@ -47,7 +49,7 @@ const Profile = () => {
             );
           })}
         </div>
-        <div className="flex flex-col w-4/5">
+        <div className="flex flex-col md:w-4/5 x-full">
           <ProfileAvatar />
           {showingComponent}
         </div>

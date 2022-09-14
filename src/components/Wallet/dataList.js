@@ -605,47 +605,326 @@ export const transactionList = [
 export const NFTList = [
   {
     id: 1,
-    gaem: {Game1},
-    quantity: 30,
+    game: Game1,
+    quantity: "30",
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
-    expenses: "25.000 PIXP"
+    expenses: "25.000 PIXP",
+    gameNFTList: [
+      {
+        id: 1,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 2,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 3,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 4,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+    ],
   },
   {
     id: 2,
-    gaem: {Game1},
+    game: Game1,
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
-    expenses: "25.000 PIXP"
+    expenses: "25.000 PIXP",
+    gameNFTList: [
+      {
+        id: 1,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 2,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 3,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 4,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+    ],
   },
   {
     id: 3,
-    gaem: {Game2},
+    game: Game2,
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
-    expenses: "25.000 PIXP"
+    expenses: "25.000 PIXP",
+    gameNFTList: [
+      {
+        id: 1,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 2,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 3,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 4,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+    ],
   },
   {
     id: 4,
-    gaem: {Game2},
+    game: Game2,
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
-    expenses: "25.000 PIXP"
+    expenses: "25.000 PIXP",
+    gameNFTList: [
+      {
+        id: 1,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 2,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 3,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 4,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+    ],
   },
   {
     id: 5,
-    gaem: {Game1},
+    game: Game1,
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
-    expenses: "25.000 PIXP"
+    expenses: "25.000 PIXP",
+    gameNFTList: [
+      {
+        id: 1,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 2,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 3,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+      {
+        id: 4,
+        NFT: Game1,
+        purchaseValue: "700 PIXP",
+        purchaseDate: "30/03/2022",
+        soldDate: "-----",
+        earning: "170 PIXP",
+        expenses: "50 PIXP",
+      },
+    ],
+  },
+]
+
+export const accountList = [
+  {
+    id: 1,
+    title: "From:",
+    content: [
+      {
+        id: 1,
+        title: "GAME ACCOUNT",
+      },
+      {
+        id: 2,
+        title: "START ACCOUNT",
+      },
+      {
+        id: 3,
+        title: "TRADE ACCOUNT",
+      },
+      {
+        id: 4,
+        title: "NFT ACCOUNT",
+      },
+      {
+        id: 5,
+        title: "STAKING ACCOUNT",
+      },
+    ]
+  },
+  {
+    id: 2,
+    title: "To:",
+    content: [
+      {
+        id: 1,
+        title: "GAME ACCOUNT",
+      },
+      {
+        id: 2,
+        title: "START ACCOUNT",
+      },
+      {
+        id: 3,
+        title: "TRADE ACCOUNT",
+      },
+      {
+        id: 4,
+        title: "NFT ACCOUNT",
+      },
+      {
+        id: 5,
+        title: "STAKING ACCOUNT",
+      },
+    ]
+  }
+]
+
+export const coinList = [
+  {
+    id: 1,
+    title: "Bitcoin"
+  },
+  {
+    id: 2,
+    title: "USDT"
+  }
+]
+
+export const currencyList = [
+  {
+    id: 1,
+    title: "USD American Dollar"
+  },
+  {
+    id: 2,
+    title: "CAD Canadian Dollar"
+  },
+  {
+    id: 3,
+    title: "FF France Frang"
+  },
+  {
+    id: 4,
+    title: "CHF Swiss Frang"
+  },
+  {
+    id: 5,
+    title: "Pound British Money"
   },
 ]

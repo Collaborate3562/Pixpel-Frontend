@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "../../components";
 import ProfileButton from "../../components/Button/ProfileButton";
 import { menuList } from "./dataList";
@@ -16,9 +16,18 @@ const Wallet = () => {
   const [tempComponent, setTempComponent] = useState(<Overview />);
   const context = useAppContext();
 
-  const handleClick = (idx) => () => {
-    context.setSelectedIndex(idx);
-    switch (context.selectedIndex) {
+  useEffect(() => {
+    if(context.selectedIndex === -1) {
+      setTempComponent(<TransactionHistory />);
+    }
+    if(context.selectedIndex === 1) {
+      setTempComponent(<PaymentMethod />)
+    }
+  }, [context.selectedIndex]);
+
+  const handleClick =  (idx) => async () => {
+    await context.setSelectedIndex(idx);
+    switch (idx) {
       case 0:
         setTempComponent(<Overview />);
         break;
@@ -61,14 +70,7 @@ const Wallet = () => {
             );
           })}
         </div>
-        <div className={`${context.selectedIndex !== -1 && 'hidden'} flex flex-col xl:w-4/5 x-full`}>
-          {context.selectedIndex === -1 && 
-            <TransactionHistory />
-          }
-        </div>
-        <div className={`${context.selectedIndex === -1 && 'hidden'} flex flex-col xl:w-4/5 x-full`}>
-          {tempComponent}
-        </div>
+        <div className="flex flex-col xl:w-4/5 x-full">{tempComponent}</div>
       </div>
     </>
   );

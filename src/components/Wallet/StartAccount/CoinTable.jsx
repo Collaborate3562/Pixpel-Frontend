@@ -1,57 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { tableList, tablefiatList } from "../dataList";
 import SwapButton from "./SwapButton";
 import TradeButton from "./TradeButton";
 import BuyButton from "./BuyButton";
 
 const CoinTable = (props) => {
-  const [tempTable, setTempTable] = React.useState(tableList);
-  React.useEffect(() => {
+  const [tempTable, setTempTable] = useState(tableList);
+  useEffect(() => {
     props.idx === 0 ? setTempTable(tablefiatList) : setTempTable(tableList);
   }, [props.idx]);
   return (
-    <table className="table-fixed w-full mt-10">
-      <thead>
-        <tr>
-          <td className="text-gray-400">Coin</td>
-          <td className="text-gray-400">Total</td>
-          <td className="text-gray-400">Available</td>
-          <td className="text-gray-400">In Orders</td>
-          <td className="text-gray-400">PIXP Value</td>
-          <td className="text-gray-400">Action</td>
-        </tr>
-      </thead>
-      <tbody className="px-4">
-        {tempTable.map((menu, idx) => {
-          return (
-            <tr key={idx} className="border-b-2 border-app-black">
-              <td className="py-3">
-                <div>{menu.Coin}</div>
-              </td>
-              <td className="py-3">
-                <div>{menu.Total}</div>
-              </td>
-              <td className="flex flex-col py-2 gap-2">
-                <div>{menu.Available}</div>
-              </td>
-              <td>
-                <div>{menu.Orders}</div>
-              </td>
-              <td>
-                <div>{menu.PIXP}</div>
-              </td>
-              <td>
-                <div className="flex gap-4">
-                  <SwapButton title="Swap" />
-                  <TradeButton title="Trade" />
-                  <BuyButton title="Buy" />
-                </div>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+    <div className="overflow-x-auto relative mt-10 w-full">
+      <table className="table-auto">
+        <thead>
+          <tr>
+            <td className="text-gray-400 w-1/6 px-6">Coin</td>
+            <td className="text-gray-400 w-1/6 px-6">Total</td>
+            <td className="text-gray-400 px-6">Available</td>
+            <td className="text-gray-400 px-6">In Orders</td>
+            <td className="text-gray-400 px-6">PIXP Value</td>
+            <td className="text-gray-400 w-1/6 px-6">Action</td>
+          </tr>
+        </thead>
+        <tbody className="px-4">
+          {tempTable.map((menu, idx) => {
+            return (
+              <tr
+                key={idx}
+                className={
+                  idx !== tempTable.length - 1
+                    ? "border-b-2 border-app-black"
+                    : ""
+                }
+              >
+                <td className="py-5 px-6">{menu.Coin}</td>
+                <td className="px-6">{menu.Total}</td>
+                <td className="px-6">{menu.Available}</td>
+                <td className="px-6">{menu.Orders}</td>
+                <td className="px-6">{menu.PIXP}</td>
+                <td className="px-6">
+                  <div className="flex gap-4">
+                    <SwapButton title="Swap" />
+                    <TradeButton title="Trade" />
+                    <BuyButton title="Buy" />
+                  </div>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

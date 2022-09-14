@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ModalPurchaseButton from "../../Button/ModalPurchaseButton";
 import ModalHalfButton from "../../Button/ModalHalfButton";
 import ModalSelectHalfButton from "../../Button/ModalSelectHalfButton";
-import { useEffect } from "react";
 
 const ConfirmationModal = (props) => {
-  const [purchaseSelected, setPurchaseSelected] = React.useState(false);
+  const [purchaseSelected, setPurchaseSelected] = useState(false);
   const handlepurchaseClick = () => {
     setPurchaseSelected(!purchaseSelected);
   };
-  const [marketSelected, setMarketSelected] = React.useState(false);
+
+  const handleModalClick = () => {
+    props.setShowModal(false);
+  };
+  
+  const [marketSelected, setMarketSelected] = useState(false);
   const handlemarketClick = () => {
     setMarketSelected(!marketSelected);
   };
-  const [buySelected, setBuySelected] = React.useState(false);
+  const [buySelected, setBuySelected] = useState(false);
   const handlebuyClick = () => {
     setBuySelected(!buySelected);
   };
-  const [sellSelected, setSellSelected] = React.useState(false);
+  const [sellSelected, setSellSelected] = useState(false);
   const handlesellClick = () => {
     setSellSelected(!sellSelected);
   };
-  const [selected, setSelected] = React.useState(false);
+  const [selected, setSelected] = useState(false);
   const setAll = (flag) => {
     setBuySelected(flag);
     setSellSelected(flag);
@@ -42,7 +46,7 @@ const ConfirmationModal = (props) => {
       purchaseSelected && buySelected && sellSelected && marketSelected
     );
   }, [purchaseSelected, buySelected, sellSelected, marketSelected]);
-  const pictureClassName = "rounded-full h-3 w-3";
+  const pictureClassName = "rounded-full h-3 w-3 flex-none";
   const className =
     "mb-5 flex items-center justify-center w-full h-14 gap-3 rounded-md hover:bg-app-blue cursor-pointer";
   return (
@@ -79,7 +83,7 @@ const ConfirmationModal = (props) => {
                   ></div>
                   <div className="text-base">Select All</div>
                 </div>
-                <div className="flex gap-4 mb-4">
+                <div className="flex gap-4 mb-4 flex-col xs:flex-row">
                   <ModalSelectHalfButton
                     title="Purchase NFT"
                     handleClick={handlepurchaseClick}
@@ -91,7 +95,7 @@ const ConfirmationModal = (props) => {
                     selected={marketSelected}
                   />
                 </div>
-                <div className="flex gap-4 mb-10">
+                <div className="flex gap-4 mb-10 flex-col xs:flex-row">
                   <ModalPurchaseButton
                     title="Buy"
                     selected={buySelected}
@@ -103,9 +107,15 @@ const ConfirmationModal = (props) => {
                     handleClick={handlesellClick}
                   />
                 </div>
-                <div className="flex mt-4 mb-10 gap-4 w-full">
-                  <ModalHalfButton title="Cancel" />
-                  <ModalHalfButton title="Apply" />
+                <div className="flex mt-4 mb-10 gap-4">
+                  <ModalHalfButton
+                    title="Cancel"
+                    handleClick={handleModalClick}
+                  />
+                  <ModalHalfButton
+                    title="Apply"
+                    handleClick={handleModalClick}
+                  />
                 </div>
               </div>
             </div>
